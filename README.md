@@ -32,4 +32,5 @@ Technologies Used:
 1.Clone the repository from gitHub location.
 2.Run mvn clean install -DskipTests
 3.In order to run all tests refer to src/test/java/testRunners/CucumberTestRunner.java
-4.Set flag cucumber.publish.enabled=true in cucumber.properties file to get the Cucumber 6 html test results report.
+4. Test results reports in format of - Json, XML, HTML will be generated in target folder.
+5.Set flag cucumber.publish.enabled=true in cucumber.properties file to get the Cucumber 6 html test results report.
