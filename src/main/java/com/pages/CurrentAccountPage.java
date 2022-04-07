@@ -4,7 +4,6 @@ import com.qa.utils.BaseUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.junit.Assert;
 
 public class CurrentAccountPage extends BaseUtils {
     private WebDriver driver;
@@ -24,7 +23,12 @@ public class CurrentAccountPage extends BaseUtils {
         for(int i=0;i<currentAccountName.length;i++) {
             String expectedCurrentAccount = currentAccountName[i];
             WebElement currentElement = driver.findElement(By.xpath("//div[@data-selector='promo-box-title-icon']//a[contains(@href,'current')]//span[text()=\""+expectedCurrentAccount+"\"]"));
-            Assert.assertTrue(currentElement.isDisplayed());
+           boolean checkElement = currentElement.isDisplayed();
+           if(checkElement){
+               System.out.println(expectedCurrentAccount +"is present on the page");
+           }else{
+               System.out.println(expectedCurrentAccount +"is not present on the page");
+           }
         }
     }
 
